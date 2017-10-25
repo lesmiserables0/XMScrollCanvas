@@ -19,7 +19,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    XMAutoScrollTextView *autoScrollView=[[XMAutoScrollTextView alloc] initWithFrame:CGRectMake(0, 200, self.view.bounds.size.width, 50) textArray:@[@"qq",@"tencent"] colorArray:@[[UIColor redColor],[UIColor greenColor]]];
+    
+    XMAutoScrollTextView *autoScrollView = [[XMAutoScrollTextView alloc] initWithFrame:CGRectMake(30, 200, self.view.bounds.size.width - 60, 50) textArray:@[@"恭喜姜先生，在双色球20171007期中得一等奖，奖金100万。",@"恭喜夏先生，在双色球20171007期中得二等奖，奖金20万。"] colorArray:@[[UIColor redColor],[UIColor yellowColor]]];
+    autoScrollView.backgroundColorOfCanvas = [UIColor darkGrayColor];
     
     [self.view addSubview:autoScrollView];
     
