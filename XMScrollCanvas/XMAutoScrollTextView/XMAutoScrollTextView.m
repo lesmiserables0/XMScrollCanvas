@@ -13,8 +13,7 @@
 //滚动时间间隔
 #define SCROLL_TIME_INTERVAL 3
 
-//每次滚动距离
-#define SCROLL_DISTANCE 100
+
 
 @implementation XMAutoScrollTextView
 
@@ -140,7 +139,7 @@
 - (void)autoScroll{
     
     //滚动速度
-    CGFloat offSet = SCROLL_DISTANCE;
+    CGFloat offSet = self.contentSize.width/10;//SCROLL_DISTANCE;
     
     //若果字幕滚动到第二部分重复的部分则把偏移置0，设为第一部分,实现无限循环
     if (self.contentOffset.x >= self.contentSize.width / 2) {
